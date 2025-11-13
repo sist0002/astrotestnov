@@ -3,7 +3,7 @@ const { data } = Astro.props;
 ---
 
 <div class="product_list_container">
-  <a href="product">
+  <a href="./product">
     <div class="image_container">
       <img src=`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp` class=`${data.soldout &&" sold_out_opacity"}` alt="cap" width="100%" />
       <div class=`hidden ${data.soldout &&"sold_out"}`>Sold out</div>
