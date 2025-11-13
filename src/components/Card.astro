@@ -1,0 +1,27 @@
+---
+const { data } = Astro.props;
+---
+
+<div class="product_list_container">
+  <a href="product">
+    <div class="image_container">
+      <img src=`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp` class=`${data.soldout &&" sold_out_opacity"}` alt="cap" width="100%" />
+      <div class=`hidden ${data.soldout &&"sold_out"}`>Sold out</div>
+      <div class=`hidden ${data.discount &&"sale"}`>
+        <p class="sale_marker">${data.discount} %</p>
+      </div>
+    </div>
+  </a>
+  <h3>{data.productdisplayname}</h3>
+  <p class="category">{data.category}</p>
+  <p class=`price ${data.discount &&" price_outline"}`>{data.price} DKK</p>
+  <div class=`hidden ${data.discount &&" sale_marker"}`>
+    <p>NOW {Math.round(data.price - (data.price * data.discount) / 100)} DKK</p>
+  </div>
+</div>
+
+<style>
+  img {
+    width: 100%;
+  }
+</style>

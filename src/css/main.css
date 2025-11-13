@@ -1,0 +1,241 @@
+/* header */
+.header_list {
+  list-style-type: none;
+  li {
+    display: inline;
+    margin: 50px;
+  }
+  li:hover {
+    text-decoration: underline;
+  }
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: white;
+  padding: 10px 10px 10px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+/* body */
+body {
+  margin: 0;
+  background-color: #000000;
+  color: white;
+}
+
+/* category page */
+.category_section {
+  padding: 0 100px 0 100px;
+  background-color: #2c3491;
+}
+.category_list_container {
+  background-color: white;
+  padding: 20px 50px 20px 50px;
+  color: #000000;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+}
+.category_list_container:hover {
+  outline: 10px solid black;
+}
+.category_grid {
+  display: grid;
+  gap: 10px;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-bottom: 100px;
+}
+
+/* product list page */
+.product_list_container {
+  background-color: white;
+  padding: 20px 50px 20px 50px;
+  color: #000000;
+  text-align: center;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 5;
+  gap: 0;
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+  p {
+    font-family: "KanitExtraLight";
+    font-size: 13px;
+    color: gray;
+  }
+}
+p.price {
+  font-family: "KanitItalic";
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+p.category {
+  margin: 0;
+}
+.product_list_container:hover {
+  outline: 10px solid #2c3491;
+}
+.product_section {
+  padding: 0 100px 0 100px;
+  background-color: black;
+}
+.image_container {
+  position: relative;
+}
+.hidden {
+  display: none;
+}
+.sold_out {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background-color: #962222;
+  color: white;
+  font-family: "KanitExtraLight";
+  padding: 20px;
+  display: block;
+}
+.sale {
+  background-color: #e0b20b;
+  color: white;
+  width: 100px;
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  p {
+    color: white;
+    font-family: "KanitItalic";
+  }
+}
+.sale_marker {
+  display: block;
+  p {
+    color: #e0b20b;
+    font-family: "KanitItalic";
+    font-size: 15px;
+  }
+}
+
+p.price_outline {
+  text-decoration: line-through;
+  color: grey;
+}
+.sold_out_opacity {
+  opacity: 20%;
+}
+
+#filters,
+#sorting {
+  margin-bottom: 10px;
+  button {
+    background-color: grey;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+  }
+  button:hover {
+    background-color: #962222;
+  }
+  button:focus {
+    background-color: #962222;
+  }
+}
+
+/* product page */
+
+.grid_2-2-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 50px;
+  margin: 0 100px 0 100px;
+  h2 {
+    color: white;
+    padding: 10px;
+  }
+  p {
+    font-family: "KanitExtraLight";
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+  .basket_area {
+    background-color: #2c3491;
+    padding-bottom: 30px;
+    margin: 0;
+    text-align: center;
+  }
+  img {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+.choose_size {
+  margin-bottom: 80px;
+}
+
+/* footer */
+footer {
+  background-color: #000000;
+  padding: 50px;
+}
+
+/* fonte */
+@font-face {
+  font-family: KanitBlackItalic;
+  src: url(../assets/fonts/Kanit-BlackItalic.ttf);
+}
+@font-face {
+  font-family: KanitExtraLight;
+  src: url(../assets/fonts/Kanit-ExtraLight.ttf);
+}
+@font-face {
+  font-family: KanitItalic;
+  src: url(../assets/fonts/Kanit-Italic.ttf);
+}
+#logo_container {
+  p {
+    font-family: "KanitBlackItalic";
+  }
+}
+.header_list {
+  li {
+    font-family: "KanitExtraLight";
+  }
+}
+
+h1 {
+  font-family: "KanitBlackItalic";
+  font-size: 100px;
+  text-align: center;
+  margin: 0;
+  background-color: white;
+  color: #000000;
+  padding: 350px 0 350px 0;
+}
+h2 {
+  font-family: "KanitItalic";
+  font-size: 40px;
+  margin: 0;
+  padding: 50px 0 20px 0;
+}
+h3 {
+  font-family: "KanitItalic";
+  font-size: 20px;
+}

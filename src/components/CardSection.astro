@@ -1,0 +1,25 @@
+---
+import Card from "./Card.astro";
+const endpoint = "https://kea-alt-del.dk/t7/api/products?limit=50";
+
+const data = await fetch(endpoint).then((res) => res.json());
+console.log(data);
+---
+
+<section class="product_section">
+  <h2 class="category_title"></h2>
+  <div id="filters">
+    <button data-gender="All">All</button>
+    <button data-gender="Women">Womens</button>
+    <button data-gender="Men">Mens</button>
+    <button data-gender="Unisex">Unisex</button>
+  </div>
+  <section id="sorting">
+    <button data-direction="lohi">Price low to high</button>
+    <button data-direction="hilo">Price high to low</button>
+  </section>
+  <p id="filter_number"></p>
+  <div class="category_grid">
+    {data.map((product) => <Card data={product} />)}
+  </div>
+</section>
